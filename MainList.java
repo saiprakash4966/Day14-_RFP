@@ -56,5 +56,7 @@ public class MainList
 		        Main list = new Main();
 		        System.out.println("Created a singly linked list .....");
 			    list.print();
+				list.addNodeAtTheBeginning(70);
+				list.addNodeAtTheBeginning(30);
 				list.addNodeAtTheBeginning(56);
 			}}
