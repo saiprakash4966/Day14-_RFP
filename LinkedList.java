@@ -1,6 +1,7 @@
 package com.bl;
 
-public class LinkedList {
+public class LinkedList 
+{
 
 	/*
 	 * Represent the head and tail of the linked list
@@ -29,30 +30,7 @@ public class LinkedList {
 			tail.next = newNode;
 			tail = newNode;
 		}
-	}
-
-	/*
-	 * creating print method
-	 */
-	public void print() {
-		/*
-		 * Node current will point to head
-		 */
-		MyNode temp = head;
-		if (head == null) {
-			System.out.println("List is empty");
-			return;
-		}
-		System.out.println("Nodes of linked list is: ");
-		while (temp != null) {
-			/*
-			 * Prints each node by incrementing pointer
-			 */
-			System.out.print(temp.data + " ");
-			temp = temp.next;
-		}
-		System.out.println();
-	}
+	}	
 
 	/*
 	 * addNode() method here new data is added inFront of data
@@ -117,8 +95,9 @@ public class LinkedList {
 		 */
 		newNode.next = cur;
 	}
+
 	/*
-	 *  Creating popAtFirst() delete the first element of the linked list
+	 * Creating popAtFirst() delete the first element of the linked list
 	 */
 	public int popAtFirst() {
 		int popData = 0;
@@ -128,5 +107,47 @@ public class LinkedList {
 		popData = head.data;
 		head = head.next;
 		return popData;
+	}
+
+	/*
+	 * Creating popAtLast() to delete the last element of the linked list
+	 */
+	public int popAtLast() {
+		System.out.println("Deleting last element of data from the list");
+		if (head == null) {
+			System.out.println("Empty LinkedList");
+		} else {
+			MyNode cur = head;
+			MyNode prev = head;
+			while (cur.next != null) {
+				prev = cur;
+				cur = cur.next;
+			}
+			prev.next = null;
+		}
+		return 0;
+	}
+
+	/*
+	 * creating print method
+	 */
+	public void print() {
+		/*
+		 *  Node current will point to head
+		 */
+		MyNode temp = head;
+		if (head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		System.out.println("Nodes of linked list is: ");
+		while (temp != null) {
+			/*
+			 *  Prints each node by incrementing pointer
+			 */
+			System.out.print(temp.data + " ");
+			temp = temp.next;
+		}
+		System.out.println();
 	}
 }
