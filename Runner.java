@@ -28,18 +28,13 @@ public class Runner
 		LinkedList list = new LinkedList();
 
 		/*
-		 * UC8. Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
+		 * UC7. Ability to search LinkedList to find Node with value 30
 		 */
 		list.insert(56);
 		list.insert(30);
 		list.insert(70);
 		list.print();
-		/*
-		 * Search LinkedList to get Node with key value 30
-		 */
 		list.searchNode(30);
-		list.insertMid(3, 40);
-		list.print();
 
 	}
 }
