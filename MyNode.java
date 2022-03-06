@@ -12,8 +12,15 @@ public class MyNode
 		this.data = data;
 		this.next = null;
 	}
+	/*
+	 * Getter Setter method
+	 */
+	public MyNode getNext() {
+        return next;
+    }
+
+    public void setNext(MyNode next) {
+        this.next = next;
+    }
 
 }
-
-
-
